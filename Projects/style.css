@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(22, 22, 22);
+
+}
+
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 150px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: white;
+}
+
+.link a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 100%;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: purple;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: rgb(70, 2, 58);
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 100px 100px rgb(48, 0, 59);
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1{
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #ffff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: grey;
+}
+
+header .image{
+    position: relative;
+}
+
+header .image::before{
+    content:"o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 15rem;
+    color: purple;
+    z-index: -100;
+    opacity: 0.2;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 5rem;
+}
+
+.features .card{
+    background-color: rgb(42, 12, 48);
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover{
+    background-color: rgb(56, 56, 56);
+    border-color: white;
+    transition: all 0.2s ease;
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: rgb(67, 22, 73);
+    color: #ffffff;
+    padding: 3px 8px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.features .card p{
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.features .card a{
+    color: white;
+    margin-bottom: 0.75rem;
+    transition: 0.3s ease;
+}
+
+.features .card a:hover{
+    color: rgb(117, 0, 226);
+    transition: 0.3s ease;
+}
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: larger;
+}
+
+.pricing{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.pricing .card{
+    background-color: rgb(42, 12, 48);
+    padding: 2rem 3rem;
+    border: 6px solid transparent;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.pricing .card:hover{
+    background-color: rgb(2, 53, 11);
+    color: rgb(10, 170, 4);
+}
+
+.pricing .card .content{
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.pricing .card h4{
+    flex: 1;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+.pricing .card h3{
+    flex: 1;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 900;
+    border-bottom: 1px dashed;
+}
+
+.pricing .card p{
+    flex: 1;
+    margin-bottom: .75rem;
+    color: white;
+}
+
+.pricing .card p i{
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+.pricing .card button{
+    color: white;
+    background-color: transparent;
+    border: 2px solid;
+}
+
+
+.pricing .card button:hover{
+    color: white;
+    background-color: green;
+    font-size: 1.7rem;
+    border-color: transparent;
+}
+
+
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr);
+    gap: 2rem;
+}
+
+footer .column .logo{
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+footer .column p{
+    margin-bottom: 2.5rem;
+    color: white;
+}
+
+
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a{
+    padding: 4px 10px;
+    border: 1px dashed;
+    color: white;
+    border-radius: 100%;
+    background-color: rgba(70, 0, 87, 0.336);
+    font-size: 2rem;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover{
+    background-color: rgba(158, 1, 197, 0.438);
+    font-size: 2.2rem;
+}
+
+footer .column h4{
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a{
+    color: white;
+    display: block;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+footer .column > a:hover{
+    color: darkorchid;
+}
+
+footer .column .logo{
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+.copyright{
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+
+    header{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+
+    .features{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .pricing{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px){
+    header .image{
+        display: none;
+    }
+
+    .features{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .pricing{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
